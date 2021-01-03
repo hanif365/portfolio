@@ -54,6 +54,9 @@ header .hanif:hover{
     margin-bottom: 20px;
     color: rgb(7, 252, 232);
 }
+.left-content{
+    margin-bottom: 60px;
+}
 .left-content button{
     padding: 10px 20px;
     border-radius: 5px;
