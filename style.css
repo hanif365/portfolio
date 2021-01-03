@@ -11,15 +11,17 @@ header{
 }
 header .hanif{
     text-decoration: none;
-    color: #fff;
+    color: aquamarine;
     text-transform: uppercase;
     padding-left: 70px;
     margin: 20px;
     position: absolute;
     font-size: 24px;
+    font-weight: bolder;
+    transition: all 500ms;
 }
 header .hanif:hover{
-    color: aquamarine;
+    color: rgb(200, 233, 14);
 }
 .main-navbar{
     display: flex;
@@ -34,6 +36,7 @@ header .hanif:hover{
     padding: 15px;
     color: #fff;
     text-transform: uppercase;
+    transition: all 500ms;
 }
 .main-navbar li a:hover{
     color: aqua;
@@ -60,13 +63,15 @@ header .hanif:hover{
     margin-top: 20px;
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
+    transition: all 500ms;
 }
 .left-content button:hover{
-    background-color: rgb(248, 224, 7);
+    background-color: rgb(7, 252, 232);
 }
 .profile-img img{
     max-width: 300px;
     height: auto;
     border-radius: 6px;
-    border: 7px solid rgb(247, 0, 255);
+    border: 7px solid rgb(7, 252, 232);
 }
