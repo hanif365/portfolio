@@ -6,8 +6,8 @@
 }
 header{
     background: rgb(119, 11, 221);
-    height: 100vh;
     max-width: 100%;
+    height: 100vh;
 }
 header .hanif{
     text-decoration: none;
@@ -46,8 +46,9 @@ header .hanif:hover{
 
 .header-content{
     display: flex;
-    justify-content:space-between;
-    margin: 180px;
+    justify-content:space-around;
+    padding: 180px 0 0 30px;
+    /* margin: 180px; */
     align-items: center;
 }
 .left-content h1,h2{
