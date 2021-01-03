@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background: rgb(119, 11, 221);
+    height: 100vh;
+    max-width: 100%;
+}
+header .hanif{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding-left: 70px;
+    margin: 20px;
+    position: absolute;
+    font-size: 24px;
+}
+header .hanif:hover{
+    color: aquamarine;
+}
+.main-navbar{
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px;
+}
+.main-navbar li{
+    list-style: none;
+}
+.main-navbar li a{
+    text-decoration: none;
+    padding: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.main-navbar li a:hover{
+    color: aqua;
+}
+
+/************ Header  Content Section*************/
+
+.header-content{
+    display: flex;
+    justify-content:space-between;
+    margin: 180px;
+    align-items: center;
+}
+.left-content h1,h2{
+    margin-bottom: 20px;
+    color: rgb(7, 252, 232);
+}
+.left-content button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.left-content button:hover{
+    background-color: rgb(248, 224, 7);
+}
+.profile-img img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 6px;
+    border: 7px solid rgb(247, 0, 255);
+}
