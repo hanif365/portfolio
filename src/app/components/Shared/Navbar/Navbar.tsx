@@ -51,13 +51,26 @@ const Navbar = () => {
     },
   };
 
+  const hireMeVariants = {
+    initial: {
+      scale: 1,
+    },
+    animate: {
+      scale: [1, 1.1, 1],
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      }
+    }
+  };
+
   return (
-    <nav className="w-full sticky top-0 left-0 right-0 z-50 py-4 bg-background">
+    <nav className="w-full sticky top-0 left-0 right-0 z-50 py-4 bg-navbar">
       <div className="justify-between px-4 sm:px-6 lg:px-8 mx-auto  md:items-center md:flex">
         <div className="flex-1 md:flex-initial">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-medium dark:text-red-500">MD. ABU HANIF</span>
+              <span className="text-xl font-medium">MD. ABU HANIF</span>
             </Link>
 
             <div className="md:hidden">
@@ -118,13 +131,20 @@ const Navbar = () => {
                 );
               })}
               <li className="text-sm font-medium py-2 text-center border-b-2 border-border md:border-b-0 md:hidden">
-                <Link
-                  href="/hire-me"
-                  className="bg-primary px-4 py-2 rounded-xl hover:bg-hover transition-colors duration-300"
-                  onClick={() => setNavbar(false)}
+                <motion.div
+                  key={isDarkMode ? "dark-hire" : "light-hire"}
+                  variants={hireMeVariants}
+                  initial="initial"
+                  animate="animate"
                 >
-                  HIRE ME
-                </Link>
+                  <Link
+                    href="/hire-me"
+                    className="bg-primary px-4 py-2 rounded-xl hover:bg-hover transition-colors duration-300"
+                    onClick={() => setNavbar(false)}
+                  >
+                    HIRE ME
+                  </Link>
+                </motion.div>
               </li>
               <li className="text-sm font-medium py-2 text-center border-b-2 border-border md:border-b-0 md:hidden">
                 <button
@@ -181,13 +201,20 @@ const Navbar = () => {
               </button>
             </li>
             <li className="text-sm font-medium py-2 text-center">
-              <Link
-                href="/hire-me"
-                className="bg-primary px-4 py-3 md:py-4 rounded-xl hover:bg-hover transition-colors duration-300"
-                onClick={() => setNavbar(false)}
+              <motion.div
+                key={isDarkMode ? "dark-hire" : "light-hire"}
+                variants={hireMeVariants}
+                initial="initial"
+                animate="animate"
               >
-                HIRE ME
-              </Link>
+                <Link
+                  href="/hire-me"
+                  className="bg-primary px-4 py-3 md:py-4 rounded-xl hover:bg-hover transition-colors duration-300"
+                  onClick={() => setNavbar(false)}
+                >
+                  HIRE ME
+                </Link>
+              </motion.div>
             </li>
           </ul>
         </div>

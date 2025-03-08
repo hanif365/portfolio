@@ -3,8 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff; /* background color for light mode */
-  --foreground: #171717; /* text color for light mode */
+  --background: #ffffff; /* background color for light mode, automatically applied*/
+  --foreground: #171717; /* text color for light mode, automatically applied*/
 
   --primary: #f5f6f8; /* primary color for light mode */
   --secondary: #e5e7eb; /* secondary color for light mode */
@@ -13,8 +13,8 @@
 }
 
 .dark {
-  --background: #0f172a; /* background color for dark mode */
-  --foreground: #f8fafc; /* text color for dark mode */
+  --background: #0f172a; /* background color for dark mode, automatically applied*/
+  --foreground: #f8fafc; /* text color for dark mode, automatically applied*/
 
   --primary: #1e293b; /* primary color for dark mode */
   --secondary: #334155; /* secondary color for dark mode */
@@ -36,6 +36,10 @@ body {
   background-color: var(--secondary);
 }
 
+.bg-navbar {
+  background-color: var(--background);
+}
+
 /* Define a utility class for hover if not using Tailwind's hover utilities */
 .hover\:bg-hover:hover {
   background-color: var(--hover);
@@ -43,3 +47,18 @@ body {
 .border-border {
   border-color: var(--border);
 }
+
+/* customize scrollbar width, color, and radius */
+::-webkit-scrollbar {
+  width: 4px;
+  /* horizonal scroll */
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d8d8d8;
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
