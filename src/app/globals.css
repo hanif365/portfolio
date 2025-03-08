@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff; /* background color for light mode */
+  --foreground: #171717; /* text color for light mode */
+
+  --primary: #f5f6f8; /* primary color for light mode */
+  --secondary: #e5e7eb; /* secondary color for light mode */
+  --hover: #edeff2; /* hover color for light mode */
+  --border: #e5e7eb; /* border color for light mode */
+}
+
+.dark {
+  --background: #0f172a; /* background color for dark mode */
+  --foreground: #f8fafc; /* text color for dark mode */
+
+  --primary: #1e293b; /* primary color for dark mode */
+  --secondary: #334155; /* secondary color for dark mode */
+  --hover: #47556941; /* hover color for dark mode */
+  --border: #ffffff; /* border color for dark mode */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+/* Define a utility class for hover if not using Tailwind's hover utilities */
+.hover\:bg-hover:hover {
+  background-color: var(--hover);
+}
+.border-border {
+  border-color: var(--border);
+}
