@@ -13,11 +13,11 @@ const Navbar = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    setIsDarkMode(document.documentElement.classList.contains('dark'));
+    setIsDarkMode(document.documentElement.classList.contains("dark"));
   }, []);
 
   const toggleTheme = () => {
-    document.documentElement.classList.toggle('dark');
+    document.documentElement.classList.toggle("dark");
     setIsDarkMode(!isDarkMode);
   };
 
@@ -60,8 +60,8 @@ const Navbar = () => {
       transition: {
         duration: 0.5,
         ease: "easeInOut",
-      }
-    }
+      },
+    },
   };
 
   return (
@@ -111,12 +111,12 @@ const Navbar = () => {
                     <Link
                       href={itemPath}
                       onClick={() => setNavbar(false)}
-                      className="relative py-3 px-5 md:mx-1 rounded-xl hover:bg-hover transition-colors duration-300"
+                      className="relative py-2 px-3 md:mx-1 rounded-lg hover:bg-hover transition-colors duration-300"
                     >
                       {isActive && (
                         <motion.div
                           layoutId="navbar-active"
-                          className="absolute inset-0 bg-secondary rounded-xl"
+                          className="absolute inset-0 bg-secondary rounded-lg"
                           initial={false}
                           transition={{
                             type: "spring",
